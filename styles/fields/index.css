@@ -28,7 +28,7 @@ input[type="date"]:focus-within {
     outline-offset: .1px;
 }
 
-input [type="date"] {
+input[type="date"] {
     &::-webkit-calendar-picker-indicator {
         opacity: 0;
     }
@@ -36,7 +36,7 @@ input [type="date"] {
         content: "";
         position: absolute;
         background: url(../../assets/icons/calendar-03.svg);
-        center/contain;
+        center\contain;
         right: 1rem;
         width: 1.25rem;
         height: 1.25rem;
@@ -48,6 +48,22 @@ input [type="date"] {
 
 select {
     background: url(../../assets/icons/arrow-down-01.svg) 
-    no-repeat calc(100% - 1rem);
-    
+    no-repeat calc(100% - 1rem);   
+}
+
+.address .flex {
+    gap: 1.25rem;
+}
+
+.input-wrapper:has([disabled]) {
+    opacity: .5;
+}
+
+input {
+    &[disabled] {
+        background-color: var(--surface-disabled);
+        border: 1px solid var(--stroke-default);
+
+        color: var(--text-primary);
+    }
 }
