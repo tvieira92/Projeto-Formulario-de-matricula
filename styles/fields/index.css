@@ -66,21 +66,21 @@ input {
 
         color: var(--text-primary);
     }
-}
 
-&:invalid {
+
+    &:invalid {
     border: 0.125rem solid var(--semantic-error);
-}
+    }
 
-& + small {
+    & + small {
     font: var(--text-sm);
     color: #78716C;
 
     display: inline-block;
     margin-top: .25rem;
-}
+    }
 
-&[required] + .error {
+    &[required] + .error {
     display: flex;
     align-items: center;
     gap: .25rem;
@@ -89,8 +89,9 @@ input {
     color: var(--semantic-error);
 
     margin-top: .25rem;
-}
+    }
 
-&:not(:focus):valid + .error {
+    &:not(:focus):valid + .error {
     display: none;
+    }
 }
